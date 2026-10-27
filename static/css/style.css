@@ -16,7 +16,7 @@
   --muted: #b3bfcd;
   --link: #8fb8ff;
   --max: 1140px;
-  --narrow: 780px;
+  --narrow: 960px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -94,7 +94,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5em 0; }
   background-size: cover; background-position: center; position: relative;
   min-height: 520px; display: flex; align-items: center;
 }
-.hero::before { content: ""; position: absolute; inset: 0; background: rgba(33, 42, 55, .55); }
+.hero::before { content: ""; position: absolute; inset: 0; background: rgba(33, 42, 55, .7); }
 .hero-inner { position: relative; max-width: 860px; margin: 0 auto; padding: 48px 16px; text-align: center; }
 .hero-logo { width: 220px; height: auto; }
 .hero h1 { margin: .3em 0 .5em; font-size: clamp(2.2rem, 6vw, 3.2rem); }
