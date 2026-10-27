@@ -1,26 +1,13 @@
-# Open inloop (open workshop) dates.
-#
-# To add a date, copy one block and change it. Keep the two spaces before
-# "hosts". Dates that have passed disappear from the site by themselves.
-#
-#   date:  YYYY-MM-DD (required)
-#   hosts: who is there, one name per line (optional)
-#   start / end: only needed when the times differ from 14:00-17:00
-#   note:  a short remark, shown in both languages (optional)
-
 - date: 2026-11-07
   hosts:
     - Marcel vDijk
-    - Tim
-
+    - Tim Daalderop
 - date: 2026-11-21
   hosts:
-    - Bauke          # second host not known yet
-
+    - Bauke
 - date: 2026-12-05
   hosts:
-    - Marcel vDijk   # second host not known yet
-
+    - Marcel vDijk
 - date: 2026-12-19
   hosts:
     - Bauke
