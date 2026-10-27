@@ -1,0 +1,64 @@
+# Site-wide settings. Change the menus and the footer here.
+title: FabLab Wageningen
+domain: fablabwag.nl
+url: https://fablabwag.nl
+email: info@fablabwag.nl
+address: Bronland 10, 6708 WH Wageningen
+logo: /wp-content/uploads/2018/10/FabLab-logo-wit-600x600-150x150.png
+favicon: /wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauwe-cirkel-32x32.png
+favicon_large: /wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauwe-cirkel-192x192.png
+apple_touch_icon: /wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauwe-cirkel-180x180.png
+
+# Menus. An item with "submenu" becomes a dropdown.
+nav:
+  nl:
+    - title: Apparatuur
+      submenu:
+        - { title: 3D-printen, url: /3d-printen/ }
+        - { title: Lasersnijden, url: /lasersnijden/ }
+        - { title: Snijplotten, url: /snijplotten/ }
+        - { title: CNC-frezen, url: /cnc/ }
+        - { title: Arduino, url: /arduino/ }
+    - { title: Open inloop, url: /open-inloop/ }
+    - { title: Huisregels, url: /huisregels/ }
+  en:
+    - title: Our equipment
+      submenu:
+        - { title: 3D printing, url: /en/3d-printing/ }
+        - { title: Laser cutting, url: /en/laser-cutting/ }
+        - { title: Vinyl cutting, url: /en/vinyl-cutting/ }
+        - { title: CNC machining, url: /en/cnc/ }
+        - { title: Arduino, url: /en/arduino/ }
+    - { title: Open workshop, url: /en/open-workshop/ }
+    - { title: House rules, url: /en/house-rules/ }
+
+# Fixed bits of text used by the templates, per language.
+text:
+  nl:
+    skip: Naar de inhoud
+    home_url: /
+    open_url: /open-inloop/
+    menu: Menu
+    upcoming: Komende open inloop
+    all_dates: Alle data en uitleg
+    no_dates: Er staan op dit moment geen nieuwe data gepland. Mail ons gerust.
+    with: met
+    subscribe: Zet de data in je eigen agenda
+    how_to_find_us: Hoe ons te vinden
+    how_to_find_us_url: /hoe-ons-te-vinden/
+    privacy: Privacyverklaring
+    privacy_url: /privacy/
+  en:
+    skip: Skip to content
+    home_url: /en/
+    open_url: /en/open-workshop/
+    menu: Menu
+    upcoming: Upcoming open workshops
+    all_dates: All dates and details
+    no_dates: No new dates are planned at the moment. Feel free to email us.
+    with: with
+    subscribe: Add the dates to your own calendar
+    how_to_find_us: How to find us
+    how_to_find_us_url: /en/how-to-find-us/
+    privacy: Privacy statement (Dutch)
+    privacy_url: /privacy/

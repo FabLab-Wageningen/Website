@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.key != "home" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  {% if page.summary %}<meta name="description" content="{{ page.summary | trim }}">{% endif %}
+  <link rel="icon" href="{{ site.favicon }}" sizes="32x32">
+  <link rel="icon" href="{{ site.favicon_large }}" sizes="192x192">
+  <link rel="apple-touch-icon" href="{{ site.apple_touch_icon }}">
+  <link rel="alternate" type="text/calendar" title="Open inloop" href="/open-inloop.ics">
+  {% for l, url in translations.items() %}<link rel="alternate" hreflang="{{ l }}" href="{{ site.url }}{{ url }}">
+  {% endfor %}<link rel="stylesheet" href="/css/style.css">
+  <script src="/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">{{ t.skip }}</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ t.home_url }}">
+        <img src="{{ site.logo }}" alt="" width="44" height="44">
+        <span>{{ site.title }}</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="bars" aria-hidden="true"></span><span class="label">{{ t.menu }}</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="{{ t.menu }}">
+        <ul>
+          {% for item in nav %}
+          {% if item.submenu %}
+          <li class="has-sub">
+            <button type="button" class="sub-toggle" aria-expanded="false">{{ item.title }}</button>
+            <ul class="sub">
+              {% for sub in item.submenu %}
+              <li><a href="{{ sub.url }}"{% if sub.url == page.permalink %} aria-current="page"{% endif %}>{{ sub.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li><a href="{{ item.url }}"{% if item.url == page.permalink %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+          <li class="lang">
+            <a href="{{ translations.nl }}" hreflang="nl" lang="nl"{% if lang == "nl" %} aria-current="true"{% endif %}>NL</a>
+            <a href="{{ translations.en }}" hreflang="en" lang="en"{% if lang == "en" %} aria-current="true"{% endif %}>EN</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    {% block main %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p><strong>{{ site.title }}</strong><br>{{ site.address }}<br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p><a href="{{ t.how_to_find_us_url }}">{{ t.how_to_find_us }}</a><br><a href="{{ t.privacy_url }}">{{ t.privacy }}</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{# List of upcoming open inloop dates. Past dates are left out when the site
+   is built, and hidden again in the browser by js/site.js, so the list stays
+   right even if the site has not been rebuilt for a while. #}
+<ul class="dates" data-dates>
+  {% for s in upcoming[:limit] %}
+  <li data-date="{{ s.date.isoformat() }}">
+    <span class="date">{{ s.date | date(lang) }}</span>
+    <span class="time">{{ s.start }}–{{ s.end }}</span>
+    {% if s.hosts %}<span class="hosts">{{ t.with }} {{ s.hosts | names(lang) }}</span>{% endif %}
+    {% if s.note %}<span class="note">{{ s.note }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+<p class="no-dates"{% if upcoming %} hidden{% endif %}>{{ t.no_dates }}</p>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap narrow">
+  <h1>{{ page.title }}</h1>
+  <div class="prose">{{ page.content | safe }}</div>
+  <h2>{{ t.upcoming }}</h2>
+  {% set limit = 50 %}
+  {% include "_dates.html" %}
+  <p class="small"><a href="/open-inloop.ics">{{ t.subscribe }}</a></p>
+</div>
+{% endblock %}
