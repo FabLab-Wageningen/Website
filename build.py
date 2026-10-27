@@ -123,16 +123,18 @@ def load_sessions(today):
     """Open workshop dates from content/data/open-inloop.yml."""
     sessions = []
     for item in load_yaml(CONTENT / "data" / "open-inloop.yml") or []:
+        if not item or not item.get("date"):
+            continue  # skip half-filled entries instead of breaking the build
         date = item["date"] if isinstance(item["date"], dt.date) else dt.date.fromisoformat(str(item["date"]))
         hosts = item.get("hosts") or []
         if isinstance(hosts, str):
             hosts = [hosts]
         sessions.append({
             "date": date,
-            "start": str(item.get("start", "14:00")),
-            "end": str(item.get("end", "17:00")),
-            "hosts": hosts,
-            "note": item.get("note", ""),
+            "start": str(item.get("start") or "14:00"),   # empty or missing means the usual time
+            "end": str(item.get("end") or "17:00"),
+            "hosts": [h for h in hosts if h],
+            "note": item.get("note") or "",
         })
     sessions.sort(key=lambda s: s["date"])
     return [s for s in sessions if s["date"] >= today], sessions

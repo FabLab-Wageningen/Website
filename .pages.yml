@@ -1,0 +1,139 @@
+# Settings for Pages CMS (https://pagescms.org): what volunteers can edit
+# and how the editing forms look. Only people with GitHub access to this
+# repository can change this file.
+
+media:
+  input: static/wp-content/uploads
+  output: /wp-content/uploads
+  categories: [image]
+  rename: safe
+
+settings:
+  content:
+    merge: true          # keep page settings that are not shown in the form
+  commit:
+    identity: user       # record who made each change, also for email collaborators
+
+content:
+  - name: open-inloop
+    label: Open inloop dates
+    description: Add a block for each Saturday. Dates that have passed disappear from the site by themselves. Leave the times empty for the usual 14:00-17:00.
+    type: file
+    path: content/data/open-inloop.yml
+    format: yaml
+    list: true
+    fields:
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: hosts
+        label: Hosts
+        description: Who is there. One name per line.
+        type: string
+        list: true
+      - name: start
+        label: Start time (only if not 14:00)
+        type: string
+        pattern:
+          regex: "^$|^[0-2][0-9]:[0-5][0-9]$"
+          message: Use a time like 13:30, or leave empty.
+      - name: end
+        label: End time (only if not 17:00)
+        type: string
+        pattern:
+          regex: "^$|^[0-2][0-9]:[0-5][0-9]$"
+          message: Use a time like 18:00, or leave empty.
+      - name: note
+        label: Note
+        description: Optional. Shown under the date, in both languages.
+        type: string
+
+  - name: pages-nl
+    label: Pages (Nederlands)
+    type: collection
+    path: content/pages/nl
+    format: yaml-frontmatter
+    operations: { create: true, rename: false, delete: false }
+    view:
+      fields: [title, permalink]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: permalink
+        label: Web address
+        description: Starts and ends with a slash, e.g. /lasersnijden/. Changing it breaks links to this page.
+        type: string
+        required: true
+      - name: key
+        label: Translation key
+        description: The same key on the Dutch and English version connects the two pages.
+        type: string
+        required: true
+      - name: body
+        label: Text
+        description: Markdown. The HTML blocks for photos next to text and galleries can stay as they are; just edit the text inside them.
+        type: code
+        options:
+          format: markdown
+
+  - name: pages-en
+    label: Pages (English)
+    type: collection
+    path: content/pages/en
+    format: yaml-frontmatter
+    operations: { create: true, rename: false, delete: false }
+    view:
+      fields: [title, permalink]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: permalink
+        label: Web address
+        description: Starts and ends with a slash, e.g. /lasersnijden/. Changing it breaks links to this page.
+        type: string
+        required: true
+      - name: key
+        label: Translation key
+        description: The same key on the Dutch and English version connects the two pages.
+        type: string
+        required: true
+      - name: body
+        label: Text
+        description: Markdown. The HTML blocks for photos next to text and galleries can stay as they are; just edit the text inside them.
+        type: code
+        options:
+          format: markdown
+
+  - name: machines
+    label: Homepage tiles
+    type: file
+    path: content/data/machines.yml
+    format: yaml
+    list: true
+    fields:
+      - name: icon
+        label: Icon
+        type: image
+      - name: color
+        label: Background colour
+        description: A colour code like #2270b4.
+        type: string
+      - name: nl
+        label: Dutch
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: url, label: Links to, type: string }
+      - name: en
+        label: English
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: url, label: Links to, type: string }

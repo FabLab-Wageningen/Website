@@ -82,6 +82,19 @@ Keep photos around 1200 pixels wide or smaller, so pages load quickly.
 
 The menus for both languages are in `content/site.yml`. The tiles are in `content/data/machines.yml`, in the order they appear.
 
+## Editing with Pages CMS
+
+Besides editing on github.com, the site can be edited with [Pages CMS](https://pagescms.org), which shows forms instead of raw files. What it shows is set in `.pages.yml`:
+
+- **Open inloop dates**: a form per Saturday (date, hosts, optional times and note).
+- **Pages (Nederlands)** and **Pages (English)**: title, address, translation key and the page text in Markdown.
+- **Homepage tiles**: icon, colour, titles and links.
+- Images are uploaded to `static/wp-content/uploads/`.
+
+People with access to this repository on GitHub sign in at app.pagescms.org with GitHub. Volunteers without a GitHub account can be invited by email for this repository only; they sign in with a code sent to that address and can edit content and images, not the settings. Every save is a commit and goes live about a minute later.
+
+Pages CMS rewrites `content/data/open-inloop.yml` when it saves, so comments in that file disappear. That is expected.
+
 ## Markdown in short
 
 ```markdown
