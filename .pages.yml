@@ -1,6 +1,5 @@
-# Settings for Pages CMS (https://pagescms.org): what volunteers can edit
-# and how the editing forms look. Only people with GitHub access to this
-# repository can change this file.
+# Settings for Pages CMS (https://pagescms.org): what editors can change
+# and how the editing forms look. 
 
 media:
   input: static/wp-content/uploads
@@ -17,7 +16,7 @@ settings:
 content:
   - name: open-inloop
     label: Open inloop dates
-    description: Add a block for each Saturday. Dates that have passed disappear from the site by themselves. Leave the times empty for the usual 14:00-17:00.
+    description: Add a block for each Saturday. Dates that have passed will automatically be removed from the site. Leave the times empty for the usual 14:00-17:00.
     type: file
     path: content/data/open-inloop.yml
     format: yaml
@@ -65,7 +64,7 @@ content:
         required: true
       - name: permalink
         label: Web address
-        description: Starts and ends with a slash, e.g. /lasersnijden/. Changing it breaks links to this page.
+        description: Starts and ends with a slash, e.g. /lasersnijden/.
         type: string
         required: true
       - name: key
@@ -96,7 +95,7 @@ content:
         required: true
       - name: permalink
         label: Web address
-        description: Starts and ends with a slash, e.g. /lasersnijden/. Changing it breaks links to this page.
+        description: Starts and ends with a slash, e.g. /lasersnijden/.
         type: string
         required: true
       - name: key
