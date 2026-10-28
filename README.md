@@ -113,18 +113,34 @@ A line break inside a paragraph needs two spaces at the end of the line.
 
 ## Publishing
 
-The site is published by the workflow in `.github/workflows/deploy.yml` on every change to `main`. One-time setup in the repository: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+The site is published by the workflow in `.github/workflows/deploy.yml` on every change to `main`. In the repository, **Settings → Pages** must have **Source: GitHub Actions**, the custom domain filled in, and **Enforce HTTPS** ticked. GitHub redirects between fablabwag.nl and www.fablabwag.nl by itself.
 
-Until our own domain is connected the site is at `https://fablab-wageningen.github.io/Website/`. The build takes care of that sub folder by itself.
-
-### Connecting fablabwag.nl
-
-1. In **Settings → Pages → Custom domain**, enter `fablabwag.nl` and save.
-2. At the domain's DNS provider, point the domain at GitHub Pages: four `A` records for `fablabwag.nl` (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153) and a `CNAME` record for `www` pointing to `fablab-wageningen.github.io`. Check GitHub's Pages documentation for the current values before changing anything.
-3. **Do not touch the MX records** (or any other mail records). They make info@fablabwag.nl work.
-4. Once GitHub shows the domain as verified, tick **Enforce HTTPS**.
+If the custom domain is ever removed, the site falls back to `https://fablab-wageningen.github.io/Website/`. Run the workflow again after any change to the custom domain (**Actions** → latest run → **Re-run all jobs**), so the links are built for the right address.
 
 Old WordPress addresses keep working: they are listed under `aliases:` in the pages and send visitors to the new address.
+
+### Domain and DNS
+
+The domain's DNS is managed at ZXCS, in DirectAdmin under **DNS Management**. Email for @fablabwag.nl runs on Google Workspace, not at ZXCS.
+
+| Name | Type | Value | Purpose |
+|---|---|---|---|
+| `fablabwag.nl.` | A | 185.199.108.153, .109.153, .110.153, .111.153 (four records) | Website (GitHub Pages) |
+| `www` | CNAME | `fablab-wageningen.github.io.` | Website |
+| `_github-pages-challenge-FabLab-Wageningen` | TXT | code from GitHub | Proves to GitHub that we own the domain. Keep it. |
+| `fablabwag.nl.` | MX (five records) | `ASPMX.L.GOOGLE.COM.` and the `ALT…` ones | Incoming email (Google) |
+| `fablabwag.nl.` | TXT | `v=spf1 include:_spf.google.com ~all` | Which servers may send our email |
+| `_dmarc`, `x._domainkey`, `k1._domainkey`, `eprov` | various | | Email authentication and the eprov.nl mail service |
+
+When editing DNS in DirectAdmin:
+
+- A name without a full stop at the end gets `.fablabwag.nl` added. Write either the short name (`www`) or the full name with a full stop (`www.fablabwag.nl.`), never the full name without one. Values pointing elsewhere also need the full stop (`google.com.`).
+- Changes can take a while to go live. Check with `dig +short TXT name.fablabwag.nl @ns.zxcs.nl` (or `A`, `CNAME`, `MX`) instead of guessing.
+- Leave **TLSA/DANE** switched off in DirectAdmin. It pins the old server's certificate and would break the site.
+- There can be only one SPF record. If another service needs to send mail as @fablabwag.nl, add it to the existing line.
+- The domain is verified for the organisation under **FabLab-Wageningen → Settings → Pages**. Removing the challenge TXT record makes it unverified again.
+
+The ZXCS hosting package also provides the DNS. Before cancelling or changing that package, make sure the DNS keeps working or is moved elsewhere first, or the website and email stop working.
 
 ## Preview on your own computer (optional)
 
