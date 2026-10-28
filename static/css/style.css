@@ -125,6 +125,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5em 0; }
 .dates .time { color: var(--muted); }
 .dates .hosts, .dates .note { color: var(--muted); }
 .dates .note { flex-basis: 100%; }
+.dates .ics { font-size: .9rem; margin-left: auto; }
 
 /* ---------- page content ---------- */
 .prose table { border-collapse: collapse; width: 100%; margin: 1em 0 1.5em; }

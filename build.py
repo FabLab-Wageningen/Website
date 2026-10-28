@@ -19,6 +19,7 @@ import re
 import shutil
 import sys
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import markdown
 import yaml
@@ -147,35 +148,51 @@ def ics_escape(text):
             .replace(",", "\\,").replace("\n", "\\n"))
 
 
+def ics_fold(line):
+    """Calendar files want lines of at most 75 bytes; longer ones continue with a space."""
+    out, current = [], ""
+    for ch in line:
+        if len((current + ch).encode("utf-8")) > 75:
+            out.append(current)
+            current = " " + ch
+        else:
+            current += ch
+    out.append(current)
+    return "\r\n".join(out)
+
+
 def build_ics(site, sessions):
-    """A calendar feed people can subscribe to (Outlook, Google, Apple)."""
-    lines = [
-        "BEGIN:VCALENDAR", "VERSION:2.0",
-        "PRODID:-//FabLab Wageningen//Open inloop//NL",
-        "X-WR-CALNAME:FabLab Wageningen open inloop",
-        "X-WR-TIMEZONE:Europe/Amsterdam",
-    ]
+    """One small calendar file per date, e.g. /open-inloop/2026-11-07.ics,
+    so visitors can add the session they want to their own calendar."""
+    local = ZoneInfo("Europe/Amsterdam")
     stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    folder = OUT / "open-inloop"
+    folder.mkdir(parents=True, exist_ok=True)
     for s in sessions:
-        day = s["date"].strftime("%Y%m%d")
-        start, end = s["start"].replace(":", ""), s["end"].replace(":", "")
+        def utc(clock):
+            hour, minute = (int(x) for x in clock.split(":"))
+            moment = dt.datetime.combine(s["date"], dt.time(hour, minute), tzinfo=local)
+            return moment.astimezone(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
         hosts = join_names(s["hosts"], "nl")
-        lines += [
+        description = " · ".join(x for x in (hosts, s["note"]) if x)
+        lines = [
+            "BEGIN:VCALENDAR", "VERSION:2.0",
+            "PRODID:-//FabLab Wageningen//Open inloop//NL",
+            "METHOD:PUBLISH",
             "BEGIN:VEVENT",
-            f"UID:open-inloop-{day}@{site['domain']}",
+            f"UID:open-inloop-{s['date'].strftime('%Y%m%d')}@{site['domain']}",
             f"DTSTAMP:{stamp}",
-            f"DTSTART;TZID=Europe/Amsterdam:{day}T{start}00",
-            f"DTEND;TZID=Europe/Amsterdam:{day}T{end}00",
+            f"DTSTART:{utc(s['start'])}",
+            f"DTEND:{utc(s['end'])}",
             "SUMMARY:FabLab Wageningen open inloop / open workshop",
             f"LOCATION:{ics_escape(site['address'])}",
             f"URL:{site['url']}/open-inloop/",
         ]
-        description = " · ".join(x for x in (hosts, s["note"]) if x)
         if description:
             lines.append(f"DESCRIPTION:{ics_escape(description)}")
-        lines.append("END:VEVENT")
-    lines.append("END:VCALENDAR")
-    (OUT / "open-inloop.ics").write_text("\r\n".join(lines) + "\r\n", encoding="utf-8")
+        lines += ["END:VEVENT", "END:VCALENDAR"]
+        text = "\r\n".join(ics_fold(line) for line in lines) + "\r\n"
+        (folder / f"{s['date'].isoformat()}.ics").write_text(text, encoding="utf-8", newline="")
 
 
 # ---------------------------------------------------------------- build
@@ -223,7 +240,7 @@ def build():
         page={"title": "Pagina niet gevonden / Page not found", "lang": "nl"},
         site=site, t=site["text"]["nl"], lang="nl", nav=site["nav"]["nl"],
         translations=homes))
-    build_ics(site, all_sessions)
+    build_ics(site, upcoming)
 
     print(f"Built {len(pages)} pages, {len(upcoming)} upcoming dates "
           f"and {len(redirects)} redirects into {OUT.name}/")

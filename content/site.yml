@@ -12,7 +12,6 @@ apple_touch_icon: /wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauw
 # Menus. An item with "submenu" becomes a dropdown.
 nav:
   nl:
-    - { title: Home, url: /}
     - title: Apparatuur
       submenu:
         - { title: 3D-printen, url: /3d-printen/ }
@@ -23,7 +22,6 @@ nav:
     - { title: Open inloop, url: /open-inloop/ }
     - { title: Huisregels, url: /huisregels/ }
   en:
-    - { title: Home, url: /en/}
     - title: Our equipment
       submenu:
         - { title: 3D printing, url: /en/3d-printing/ }
@@ -45,7 +43,7 @@ text:
     all_dates: Alle data en uitleg
     no_dates: Er staan op dit moment geen nieuwe data gepland. Mail ons gerust.
     with: met
-    subscribe: Zet de data in je eigen agenda
+    add_to_calendar: In je agenda
     how_to_find_us: Hoe ons te vinden
     how_to_find_us_url: /hoe-ons-te-vinden/
     privacy: Privacyverklaring
@@ -59,7 +57,7 @@ text:
     all_dates: All dates and details
     no_dates: No new dates are planned at the moment. Feel free to email us.
     with: with
-    subscribe: Add the dates to your own calendar
+    add_to_calendar: Add to calendar
     how_to_find_us: How to find us
     how_to_find_us_url: /en/how-to-find-us/
     privacy: Privacy statement (Dutch)

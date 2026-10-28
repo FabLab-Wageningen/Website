@@ -41,7 +41,7 @@ Open `content/data/open-inloop.yml` and add a block:
 
 Only `date` is required. The time is 14:00-17:00 unless you add `start:` and `end:`. A short `note:` is shown under the date. Dates that have passed disappear from the site by themselves. The homepage shows the next four dates, the open inloop page shows all upcoming ones.
 
-The dates are also published as a calendar feed, `/open-inloop.ics`, which people can subscribe to in Outlook, Google Calendar or Apple Calendar.
+Each upcoming date has an "add to calendar" link to its own small calendar file (for example `/open-inloop/2027-01-16.ics`), which opens in Outlook, Google Calendar or Apple Calendar.
 
 ### Edit a page
 
