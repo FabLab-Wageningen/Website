@@ -119,29 +119,6 @@ If the custom domain is ever removed, the site falls back to `https://fablab-wag
 
 Old WordPress addresses keep working: they are listed under `aliases:` in the pages and send visitors to the new address.
 
-### Domain and DNS
-
-The domain's DNS is managed at ZXCS, in DirectAdmin under **DNS Management**. Email for @fablabwag.nl runs on Google Workspace, not at ZXCS.
-
-| Name | Type | Value | Purpose |
-|---|---|---|---|
-| `fablabwag.nl.` | A | 185.199.108.153, .109.153, .110.153, .111.153 (four records) | Website (GitHub Pages) |
-| `www` | CNAME | `fablab-wageningen.github.io.` | Website |
-| `_github-pages-challenge-FabLab-Wageningen` | TXT | code from GitHub | Proves to GitHub that we own the domain. Keep it. |
-| `fablabwag.nl.` | MX (five records) | `ASPMX.L.GOOGLE.COM.` and the `ALT…` ones | Incoming email (Google) |
-| `fablabwag.nl.` | TXT | `v=spf1 include:_spf.google.com ~all` | Which servers may send our email |
-| `_dmarc`, `x._domainkey`, `k1._domainkey`, `eprov` | various | | Email authentication and the eprov.nl mail service |
-
-When editing DNS in DirectAdmin:
-
-- A name without a full stop at the end gets `.fablabwag.nl` added. Write either the short name (`www`) or the full name with a full stop (`www.fablabwag.nl.`), never the full name without one. Values pointing elsewhere also need the full stop (`google.com.`).
-- Changes can take a while to go live. Check with `dig +short TXT name.fablabwag.nl @ns.zxcs.nl` (or `A`, `CNAME`, `MX`) instead of guessing.
-- Leave **TLSA/DANE** switched off in DirectAdmin. It pins the old server's certificate and would break the site.
-- There can be only one SPF record. If another service needs to send mail as @fablabwag.nl, add it to the existing line.
-- The domain is verified for the organisation under **FabLab-Wageningen → Settings → Pages**. Removing the challenge TXT record makes it unverified again.
-
-The ZXCS hosting package also provides the DNS. Before cancelling or changing that package, make sure the DNS keeps working or is moved elsewhere first, or the website and email stop working.
-
 ## Preview on your own computer (optional)
 
 You need Python 3.10 or newer.
