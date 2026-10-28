@@ -12,6 +12,7 @@ apple_touch_icon: /wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauw
 # Menus. An item with "submenu" becomes a dropdown.
 nav:
   nl:
+    - { title: Home, url: /}
     - title: Apparatuur
       submenu:
         - { title: 3D-printen, url: /3d-printen/ }
@@ -22,6 +23,7 @@ nav:
     - { title: Open inloop, url: /open-inloop/ }
     - { title: Huisregels, url: /huisregels/ }
   en:
+    - { title: Home, url: /en/}
     - title: Our equipment
       submenu:
         - { title: 3D printing, url: /en/3d-printing/ }
