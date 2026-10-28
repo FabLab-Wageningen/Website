@@ -14,6 +14,7 @@ nav:
   nl:
     - title: Apparatuur
       submenu:
+        - { title: Home, url: /}
         - { title: 3D-printen, url: /3d-printen/ }
         - { title: Lasersnijden, url: /lasersnijden/ }
         - { title: Snijplotten, url: /snijplotten/ }
@@ -24,6 +25,7 @@ nav:
   en:
     - title: Our equipment
       submenu:
+        - { title: Home, url: /en/}
         - { title: 3D printing, url: /en/3d-printing/ }
         - { title: Laser cutting, url: /en/laser-cutting/ }
         - { title: Vinyl cutting, url: /en/vinyl-cutting/ }
