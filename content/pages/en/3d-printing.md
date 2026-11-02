@@ -11,7 +11,7 @@ aliases:
 
 <div class="media-text" markdown="1">
 
-![Prusa CoreOne 3D printer with two printed busts](/wp-content/uploads/2026/10/IMG20261026173427-1024x768.jpg)
+![Prusa CoreOne 3D printer with two printed busts](/images/photos/prusa-coreone.jpg)
 
 <div markdown="1">
 

@@ -7,7 +7,7 @@ aliases:
   - /en/fablab/arduino/
 ---
 
-![](/wp-content/uploads/2017/02/Arduino_led-1.png)
+![](/images/photos/arduino-led.png)
 
 **Arduino** is one of the platforms you can use for making electronic controllers. It is a small cheap open-source micro-controller you can program in a relatively simple programming language and which is able to perform tasks that previously required quite complex systems. Using an Arduino you can make robots, self-steering machines, advanced measuring equipment or even control an 3D-printer. Arduino’s can be linked to an vast list of extensions: sensors, accelerometers, GPS-systems, Bluetooth- and radio-connections etcetera. The possibilities are almost endless. Artists are now starting to use Arduino in building interactive installations. Researchers can cheaply build measuring equipment offering a whole new range of possibilities. And besides Arduino there are more platforms, each with its own characteristics and possibilities, like Raspberry Pi and ESP32. At FabLab Wageningen there are several persons who use Arduino in their projects. They can help you with your project if you need assistance. And we organise evenings where we exchange information on what to do with micro-controllers and how to use them.
 

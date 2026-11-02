@@ -10,7 +10,7 @@ aliases:
 
 <div class="media-text" markdown="1">
 
-![Weeding cut vinyl foil](/wp-content/uploads/2026/10/stickers-1024x768.jpg)
+![Weeding cut vinyl foil](/images/photos/vinyl-weeding.jpg)
 
 <div markdown="1">
 

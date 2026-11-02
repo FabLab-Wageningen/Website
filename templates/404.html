@@ -6,4 +6,15 @@
   <h2 lang="en">Page not found</h2>
   <p lang="en">This page does not exist (anymore). Go to the <a href="/en/">English homepage</a> or email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
 </div>
+<script>
+  // Forward old WordPress file addresses (content/data/moved_files.yml) to where the file is now.
+  // WordPress made several sizes of each image (photo-300x200.jpg), so also try without the size.
+  var moved = {{ moved_files | tojson }}, base = {{ base | tojson }};
+  var path = decodeURI(location.pathname).slice(base.length);
+  var sized = path.replace(/-\d+x\d+(\.\w+)$/, "$1");
+  var target = moved[path] || moved[sized] || Object.keys(moved).filter(function (old) {
+    return old.replace(/-\d+x\d+(\.\w+)$/, "$1") === sized;
+  }).map(function (old) { return moved[old]; })[0];
+  if (target) location.replace(base + target);
+</script>
 {% endblock %}

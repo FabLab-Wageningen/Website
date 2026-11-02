@@ -239,7 +239,8 @@ def build():
     write_page("/404.html", env.get_template("404.html").render(
         page={"title": "Pagina niet gevonden / Page not found", "lang": "nl"},
         site=site, t=site["text"]["nl"], lang="nl", nav=site["nav"]["nl"],
-        translations=homes))
+        translations=homes,
+        moved_files=load_yaml(CONTENT / "data" / "moved_files.yml"), base=BASE))
     build_ics(site, upcoming)
 
     print(f"Built {len(pages)} pages, {len(upcoming)} upcoming dates "

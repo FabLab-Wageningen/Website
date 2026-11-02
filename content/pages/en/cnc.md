@@ -9,7 +9,7 @@ aliases:
 
 <div class="media-text" markdown="1">
 
-![The big CNC router (Ooznest WorkBee) with dust extraction](/wp-content/uploads/2026/10/IMG20261026173151-1024x768.jpg)
+![The big CNC router (Ooznest WorkBee) with dust extraction](/images/photos/cnc-workbee.jpg)
 
 <div markdown="1">
 

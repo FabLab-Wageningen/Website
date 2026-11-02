@@ -2,8 +2,8 @@
 # and how the editing forms look. 
 
 media:
-  input: static/wp-content/uploads
-  output: /wp-content/uploads
+  input: static/images
+  output: /images
   categories: [image]
   rename: safe
 

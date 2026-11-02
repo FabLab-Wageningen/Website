@@ -6,7 +6,7 @@ aliases:
   - /fablab/arduino/
 ---
 
-![](/wp-content/uploads/2017/02/Arduino_led-1.png)
+![](/images/photos/arduino-led.png)
 
 **Arduino** is één van de platforms waarmee je zelf besturingen kunt bouwen. Het is een goedkope kleine open-source micro-controller die je met een eenvoudige programmeertaal dingen kunt laten doen waar je voorheen complexe systemen nodig had. Met Arduino kun je bijvoorbeeld robots maken, zelfsturende machines, meetapparatuur die voorheen onbetaalbaar was of je eigen 3D printer. En er is een wereld aan mogelijkheden om een Arduino-controller te koppelen aan allerlei sensoren, versnellingsmeters, GPS-systemen, bluetooth- of radioverbindingen enzovoort. De mogelijkheden zijn onbegrensd. Kunstenaars gebruiken Arduino steeds vaker voor het bouwen van interactieve installaties. Onderzoekers kunnen goedkope meetapparatuur maken die hele nieuwe mogelijkheden biedt. En behalve Arduino zijn er nog meer platforms met elk hun eigen bijzonderheden. Misschien heb je wel eens gehoord van Raspberry Pi of ESP32. Bij FabLabWag zijn verschillende mensen die gebruik maken van Arduino. Zij kunnen je helpen bij je eigen projecten. En er worden introductie-avonden georganiseerd om uit te leggen wat je er mee kunt en hoe je er mee aan de slag kunt gaan.
 

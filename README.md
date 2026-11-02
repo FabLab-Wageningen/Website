@@ -17,7 +17,7 @@ static/
   css/style.css            colours, fonts, layout
   js/site.js               mobile menu and hiding past dates
   fonts/                   the Dosis font, served from this site
-  wp-content/uploads/      images (same addresses as on the old WordPress site)
+  images/                  images: brand/ (logo, icons), machines/ (homepage tiles), photos/
 templates/                 HTML layout of each page type (rarely needs changing)
 build.py                   the build script
 requirements.txt           the Python packages the build uses, with exact versions
@@ -70,13 +70,15 @@ Copy an existing page in the same folder, give the copy a new file name, and cha
 
 ### Add or change an image
 
-Upload the image to `static/wp-content/uploads/` (a sub folder like `2027/01/` is fine): open the folder on github.com, "Add file" then "Upload files". Then use it in a page:
+Upload the image to `static/images/photos/` (or `brand/` or `machines/`), with a short, clear file name like `laser-keychains.jpg`: open the folder on github.com, "Add file" then "Upload files". Then use it in a page:
 
 ```markdown
-![Short description of the photo](/wp-content/uploads/2027/01/my-photo.jpg)
+![Short description of the photo](/images/photos/laser-keychains.jpg)
 ```
 
 Keep photos around 1200 pixels wide or smaller, so pages load quickly.
+
+If you move or rename an image that was already online, add a line to `content/data/moved_files.yml` with the old and the new address. Visitors with an old link are then sent to the new address. That file also holds the addresses from the old WordPress site (`/wp-content/uploads/...`).
 
 ### Change the menu or the homepage tiles
 
@@ -89,7 +91,7 @@ Besides editing on github.com, the site can be edited with [Pages CMS](https://p
 - **Open inloop dates**: a form per Saturday (date, hosts, optional times and note).
 - **Pages (Nederlands)** and **Pages (English)**: title, address, translation key and the page text in Markdown.
 - **Homepage tiles**: icon, colour, titles and links.
-- Images are uploaded to `static/wp-content/uploads/`.
+- Images are uploaded to `static/images/`.
 
 People with access to this repository on GitHub sign in at app.pagescms.org with GitHub. Volunteers without a GitHub account can be invited by email for this repository only; they sign in with a code sent to that address and can edit content and images, not the settings. Every save is a commit and goes live about a minute later.
 

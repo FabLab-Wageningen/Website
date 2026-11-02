@@ -19,6 +19,6 @@ Outside working hours the building is closed and only accessible for pass holder
 **Open Workshop on Saturdays:**  
 Visitors to Saturdays Open Workshops can come directly to our own entrance door at the east (Unilever, Thymospad) side of the building (beyond the parking garage). The main entrance of the building is closed and we can not hear the doorbell.
 
-![](/wp-content/uploads/2021/10/zij-ingang-FabLab-plus-ingang-PU2-PeeeNGee.jpg)
+![](/images/photos/entrance.jpg)
 
 We hope this photograph helps a little.

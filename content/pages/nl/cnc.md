@@ -6,7 +6,7 @@ key: cnc
 
 <div class="media-text" markdown="1">
 
-![De grote CNC-frees (Ooznest WorkBee) met stofafzuiging](/wp-content/uploads/2026/10/IMG20261026173151-1024x768.jpg)
+![De grote CNC-frees (Ooznest WorkBee) met stofafzuiging](/images/photos/cnc-workbee.jpg)
 
 <div markdown="1">
 

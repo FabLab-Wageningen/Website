@@ -6,7 +6,7 @@ template: home.html
 aliases:
   - /fablab/
 summary: FabLab Wageningen is een werkplaats voor iedereen, met lasersnijder, snijplotter, 3D-printers en CNC-machines.
-hero_image: /wp-content/uploads/2023/05/FabLab_ex_site_StartHub1b.jpg
+hero_image: /images/photos/home-hero.jpg
 machines_title: Onze machines
 intro: |
   FabLab Wageningen is een werkplaats voor iedereen. Met digitaal gestuurde machines zoals een lasersnijder, een snijplotter, 3D-printers en CNC-machines kun je dingen maken die tot voor kort onmogelijk of onbetaalbaar waren.

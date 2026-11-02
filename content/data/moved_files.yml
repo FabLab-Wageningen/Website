@@ -1,0 +1,22 @@
+# Old WordPress file addresses and where each file is now.
+# The 404 page uses this list to send old links to the new address.
+# Add a line here when you move or rename an image.
+"/wp-content/uploads/2017/01/Arduino-E.A.-wit.png": /images/machines/icon-arduino.png
+"/wp-content/uploads/2017/01/fabmoment-01-13-12-2015_S-1024x694.jpg": /images/photos/laser-fabmoment-2015-12-13.jpg
+"/wp-content/uploads/2017/01/fabmoment-01-21-11-2015-01-1024x683.jpg": /images/photos/laser-fabmoment-2015-11-21.jpg
+"/wp-content/uploads/2017/01/fabmoment-stempel-23-08-2016-01-1024x683.jpg": /images/photos/laser-stamp-2016-08-23.jpg
+"/wp-content/uploads/2017/01/icon-3d.png": /images/machines/icon-3d-printing.png
+"/wp-content/uploads/2017/01/icon-laser.png": /images/machines/icon-laser-cutting.png
+"/wp-content/uploads/2017/01/icon-sticker.png": /images/machines/icon-vinyl-cutting.png
+"/wp-content/uploads/2017/02/Arduino_led-1.png": /images/photos/arduino-led.png
+"/wp-content/uploads/2018/10/FabLab-logo-wit-600x600-150x150.png": /images/brand/logo-150.png
+"/wp-content/uploads/2018/10/FabLab-logo-wit-600x600.png": /images/brand/logo.png
+"/wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauwe-cirkel-180x180.png": /images/brand/favicon-180.png
+"/wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauwe-cirkel-192x192.png": /images/brand/favicon-192.png
+"/wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauwe-cirkel-32x32.png": /images/brand/favicon-32.png
+"/wp-content/uploads/2021/10/zij-ingang-FabLab-plus-ingang-PU2-PeeeNGee.jpg": /images/photos/entrance.jpg
+"/wp-content/uploads/2022/03/CNC_icon_v3_web_PNG-300x300.png": /images/machines/icon-cnc.png
+"/wp-content/uploads/2023/05/FabLab_ex_site_StartHub1b.jpg": /images/photos/home-hero.jpg
+"/wp-content/uploads/2026/10/IMG20261026173151-1024x768.jpg": /images/photos/cnc-workbee.jpg
+"/wp-content/uploads/2026/10/IMG20261026173427-1024x768.jpg": /images/photos/prusa-coreone.jpg
+"/wp-content/uploads/2026/10/stickers-1024x768.jpg": /images/photos/vinyl-weeding.jpg

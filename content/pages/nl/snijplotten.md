@@ -9,7 +9,7 @@ aliases:
 
 <div class="media-text" markdown="1">
 
-![Gesneden vinylfolie wordt gewied](/wp-content/uploads/2026/10/stickers-1024x768.jpg)
+![Gesneden vinylfolie wordt gewied](/images/photos/vinyl-weeding.jpg)
 
 <div markdown="1">
 

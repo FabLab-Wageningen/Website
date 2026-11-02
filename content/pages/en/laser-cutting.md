@@ -21,9 +21,9 @@ The laser is always perpendicular to the sheet, so it only makes straight 90-deg
 
 <div class="gallery" markdown="1">
 
-![](/wp-content/uploads/2017/01/fabmoment-stempel-23-08-2016-01-1024x683.jpg)
-![](/wp-content/uploads/2017/01/fabmoment-01-21-11-2015-01-1024x683.jpg)
-![](/wp-content/uploads/2017/01/fabmoment-01-13-12-2015_S-1024x694.jpg)
+![](/images/photos/laser-stamp-2016-08-23.jpg)
+![](/images/photos/laser-fabmoment-2015-11-21.jpg)
+![](/images/photos/laser-fabmoment-2015-12-13.jpg)
 
 </div>
 

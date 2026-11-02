@@ -4,10 +4,10 @@ domain: fablabwag.nl
 url: https://fablabwag.nl
 email: info@fablabwag.nl
 address: Bronland 10, 6708 WH Wageningen
-logo: /wp-content/uploads/2018/10/FabLab-logo-wit-600x600-150x150.png
-favicon: /wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauwe-cirkel-32x32.png
-favicon_large: /wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauwe-cirkel-192x192.png
-apple_touch_icon: /wp-content/uploads/2019/03/cropped-FabLab-witte-wolk-in-blauwe-cirkel-180x180.png
+logo: /images/brand/logo-150.png
+favicon: /images/brand/favicon-32.png
+favicon_large: /images/brand/favicon-192.png
+apple_touch_icon: /images/brand/favicon-180.png
 
 # Menus. An item with "submenu" becomes a dropdown.
 nav:

@@ -19,6 +19,6 @@ Buiten normale werktijd is het gebouw gesloten en alleen toegankelijk voor pasje
 **Open Inloop op zaterdag:**  
 Bezoekers van de Open Inloop kunnen aankloppen bij onze deur aan de zijkant (kant Thymospad / Unilever) op de begane grond (achter de parkeergarage). De hoofdingangen van het gebouw zijn dan gesloten, en we horen de bel niet.
 
-![](/wp-content/uploads/2021/10/zij-ingang-FabLab-plus-ingang-PU2-PeeeNGee.jpg)
+![](/images/photos/entrance.jpg)
 
 Hopelijk helpt deze foto een beetje.

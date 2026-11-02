@@ -4,7 +4,7 @@ permalink: /en/
 key: home
 template: home.html
 summary: FabLab Wageningen is a workshop for everyone, with a laser cutter, vinyl cutter, 3D printers and CNC machines.
-hero_image: /wp-content/uploads/2023/05/FabLab_ex_site_StartHub1b.jpg
+hero_image: /images/photos/home-hero.jpg
 machines_title: Machines
 intro: |
   FabLab Wageningen is a workshop for everyone. With digitally controlled machines such as a laser cutter, a vinyl cutter, 3D printers, and CNC machines, you can make things that until recently were impossible or unaffordable.
