@@ -6,9 +6,12 @@
   <li data-date="{{ s.date.isoformat() }}">
     <span class="date">{{ s.date | date(lang) }}</span>
     <span class="time">{{ s.start }}–{{ s.end }}</span>
-    {% if s.hosts %}<span class="hosts">{{ t.with }} {{ s.hosts | names(lang) }}</span>{% endif %}
+    {% if s.hosts or s.note %}<span class="hosts">
+      {%- if s.hosts %}{{ t.with }} {{ s.hosts | names(lang) }}{% endif %}
+      {%- if s.hosts and s.note %} · {% endif %}
+      {%- if s.note %}<span class="note">{{ s.note }}</span>{% endif -%}
+    </span>{% endif %}
     <a class="ics" href="/open-inloop/{{ s.date.isoformat() }}.ics" download>{{ t.add_to_calendar }}</a>
-    {% if s.note %}<span class="note">{{ s.note }}</span>{% endif %}
   </li>
   {% endfor %}
 </ul>

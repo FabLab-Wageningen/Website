@@ -123,8 +123,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5em 0; }
 .dates li { display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .dates .date { font-weight: 700; color: #fff; min-width: 13em; }
 .dates .time { color: var(--muted); }
-.dates .hosts, .dates .note { color: var(--muted); }
-.dates .note { flex-basis: 100%; }
+.dates .hosts { color: var(--muted); }
 .dates .ics { font-size: .9rem; margin-left: auto; }
 
 /* ---------- page content ---------- */
