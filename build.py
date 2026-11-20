@@ -120,6 +120,16 @@ def load_pages():
     return pages
 
 
+def clock(value, default):
+    """A time like "19:00". YAML reads an unquoted 19:00 as the number 1140
+    (minutes, base 60), which is what Pages CMS writes, so turn that back."""
+    if value in (None, ""):
+        return default
+    if isinstance(value, int):
+        return f"{value // 60:02d}:{value % 60:02d}"
+    return str(value)
+
+
 def load_sessions(today):
     """Open workshop dates from content/data/open-inloop.yml."""
     sessions = []
@@ -132,8 +142,8 @@ def load_sessions(today):
             hosts = [hosts]
         sessions.append({
             "date": date,
-            "start": str(item.get("start") or "14:00"),   # empty or missing means the usual time
-            "end": str(item.get("end") or "17:00"),
+            "start": clock(item.get("start"), "14:00"),   # empty or missing means the usual time
+            "end": clock(item.get("end"), "17:00"),
             "hosts": [h for h in hosts if h],
             "note": item.get("note") or "",
         })
