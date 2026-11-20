@@ -13,3 +13,7 @@
   hosts:
     - Bauke
     - Paul
+- date: 2026-12-15
+  start: 19:00
+  end: 21:30
+  note: CNC avond
