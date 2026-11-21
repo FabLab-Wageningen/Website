@@ -3,8 +3,7 @@ title: Hoe ons te vinden
 permalink: /hoe-ons-te-vinden/
 key: find
 ---
-
-FabLab Wageningen is – samen met de rest van de StartHub community – verhuisd naar de begane grond van WUR ‘Plus Ultra II’, op de hoek van Bronland en Plantage. Bij deze even in ’t kort hoe ons te bereiken.
+FabLab Wageningen is – samen met de rest van de StartHub community – verhuisd naar de begane grond van WUR ‘Plus Ultra II’, op de hoek van Bronland en Plantage. Bij deze even in het kort hoe ons te bereiken.
 
 De ingang van ‘Plus Ultra II’ is een beetje verborgen achter het grasveld en het voetpad met groenstroken voor ‘Plus Ultra’. Loop langs ‘Plus Ultra’ en diens hoofdingang en je komt er wel. Ga het gebouw binnen en loop het atrium in. Loop recht door en als je bijna het atrium weer uit lijkt te lopen ga je linksaf, door een poort in een metalen schuifhek. Het hek is soms compleet ingeschoven – dat is om iedereen te verwarren. Zodra je linksaf gedraaid bent, loop recht door en je zou er – theoretisch – moeten zijn. Bij twijfel: vraag maar iemand. De bewoners van ‘Plus Ultra II’ zijn niet gevaarlijk 😉
 
