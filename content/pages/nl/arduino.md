@@ -5,7 +5,6 @@ key: arduino
 aliases:
   - /fablab/arduino/
 ---
-
 ![](/images/photos/arduino-led.png)
 
 **Arduino** is één van de platforms waarmee je zelf besturingen kunt bouwen. Het is een goedkope kleine open-source micro-controller die je met een eenvoudige programmeertaal dingen kunt laten doen waar je voorheen complexe systemen nodig had. Met Arduino kun je bijvoorbeeld robots maken, zelfsturende machines, meetapparatuur die voorheen onbetaalbaar was of je eigen 3D printer. En er is een wereld aan mogelijkheden om een Arduino-controller te koppelen aan allerlei sensoren, versnellingsmeters, GPS-systemen, bluetooth- of radioverbindingen enzovoort. De mogelijkheden zijn onbegrensd. Kunstenaars gebruiken Arduino steeds vaker voor het bouwen van interactieve installaties. Onderzoekers kunnen goedkope meetapparatuur maken die hele nieuwe mogelijkheden biedt. En behalve Arduino zijn er nog meer platforms met elk hun eigen bijzonderheden. Misschien heb je wel eens gehoord van Raspberry Pi of ESP32. Bij FabLabWag zijn verschillende mensen die gebruik maken van Arduino. Zij kunnen je helpen bij je eigen projecten. En er worden introductie-avonden georganiseerd om uit te leggen wat je er mee kunt en hoe je er mee aan de slag kunt gaan.
@@ -33,4 +32,4 @@ De kosten voor de acht avonden zijn €120,- voor FabLab-abonnees en €180,- vo
 
 **Aanmelden**
 
-Stuur een mail met je naam en contactgegevens **<onecue@chello.nl>**. of naar <info@fablabwag.nl> en maak het cursusgeld over naar NL60 TRIO 0254 7015 58 t.n.v Stichting FabLab Wageningen, onder vermelding van ‘Beginnerscursus Arduino’ en je naam.
+Stuur een mail met je naam en contactgegevens naar **<onecue@chello.nl>** of naar <info@fablabwag.nl> en maak het cursusgeld over naar NL60 TRIO 0254 7015 58 t.n.v Stichting FabLab Wageningen, onder vermelding van ‘Beginnerscursus Arduino’ en je naam.
