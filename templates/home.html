@@ -23,7 +23,7 @@
 </section>
 
 <section class="wrap narrow section">
-  <h2>{{ t.upcoming }}</h2>
+  <h2>{{ page.dates_title or t.upcoming }}</h2>
   {% set limit = 4 %}
   {% include "_dates.html" %}
   <p><a href="{{ t.open_url }}">{{ t.all_dates }} →</a></p>

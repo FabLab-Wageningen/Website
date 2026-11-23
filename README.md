@@ -88,7 +88,7 @@ The menus for both languages are in `content/site.yml`. The tiles are in `conten
 
 Besides editing on github.com, the site can be edited with [Pages CMS](https://pagescms.org), which shows forms instead of raw files. What it shows is set in `.pages.yml`:
 
-- **Homepage (Nederlands)** and **Homepage (English)**: the photo at the top, the heading and text on it, the heading above the machine tiles, and the text further down.
+- **Homepage (Nederlands)** and **Homepage (English)**: the photo at the top, the heading and text on it, the headings above the machine tiles and the dates, and the text further down.
 - **Homepage tiles**: icon, colour, titles and links.
 - **Pages (Nederlands)** and **Pages (English)**: title, address, translation key and the page text in Markdown (all pages except the homepage).
 - **Open inloop dates**: a form per Saturday (date, hosts, optional times and note).

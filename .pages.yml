@@ -38,6 +38,9 @@ content:
       - name: machines_title
         label: Heading above the machine tiles
         type: string
+      - name: dates_title
+        label: Heading above the dates
+        type: string
       - name: summary
         label: Short description
         description: Shown by search engines and when the page is shared. One or two sentences.
@@ -72,6 +75,9 @@ content:
           format: markdown
       - name: machines_title
         label: Heading above the machine tiles
+        type: string
+      - name: dates_title
+        label: Heading above the dates
         type: string
       - name: summary
         label: Short description
