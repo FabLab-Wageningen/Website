@@ -5,18 +5,25 @@ key: home
 template: home.html
 aliases:
   - /fablab/
-summary: FabLab Wageningen is een werkplaats voor iedereen, met lasersnijder, snijplotter, 3D-printers en CNC-machines.
+summary: FabLab Wageningen is een werkplaats voor iedereen, met lasersnijder,
+  snijplotter, 3D-printers en CNC-machines.
 hero_image: /images/photos/home-hero.jpg
 machines_title: Onze machines
-dates_title: Komende open inloop
-intro: |
-  FabLab Wageningen is een werkplaats voor iedereen. Met digitaal gestuurde machines zoals een lasersnijder, een snijplotter, 3D-printers en CNC-machines kun je dingen maken die tot voor kort onmogelijk of onbetaalbaar waren.
+dates_title: Komende open inloop en evenementen
+intro: >
+  FabLab Wageningen is een werkplaats voor iedereen. Met digitaal gestuurde
+  machines zoals een lasersnijder, een snijplotter, 3D-printers en CNC-machines
+  kun je dingen maken die tot voor kort onmogelijk of onbetaalbaar waren.
 
-  Zelf proberen? Dat kan! Om de week ben je op zaterdagmiddag van 14:00 tot 17:00 welkom op onze Open Inloop. Zie hieronder de data.  
+
+  Zelf proberen? Dat kan! Om de week ben je op zaterdagmiddag van 14:00 tot
+  17:00 welkom op onze Open Inloop. Zie hieronder de data.  
+
   Gebruik dan wel onze zij-ingang, niet de hoofdingang van ‘Plus Ultra II’.  
-  Elke woensdag van 14:00 tot 18:00 (tijdens de ‘Starthub’ netwerk-events) zijn we er ook, dan vooral voor vragen en advies.
----
 
+  Elke woensdag van 14:00 tot 18:00 (tijdens de ‘Starthub’ netwerk-events) zijn
+  we er ook, dan vooral voor vragen en advies.
+---
 ## Lid worden
 
 Wie zelf aan de slag wil, volgt een introductiecursus van twee avonden en is daarna een jaar lid.
