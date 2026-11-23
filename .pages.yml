@@ -14,6 +14,167 @@ settings:
     identity: user       # record who made each change, also for email collaborators
 
 content:
+  - name: home-nl
+    label: Homepage (Nederlands)
+    description: The text on the photo at the top, the photo itself, and the text further down the page.
+    type: file
+    path: content/pages/nl/home.md
+    format: yaml-frontmatter
+    operations: { create: false, rename: false, delete: false }
+    fields:
+      - name: hero_image
+        label: Photo at the top
+        type: image
+      - name: title
+        label: Heading on the photo
+        type: string
+        required: true
+      - name: intro
+        label: Text on the photo
+        description: Markdown. End a line with two spaces to start a new line without an empty line in between.
+        type: code
+        options:
+          format: markdown
+      - name: machines_title
+        label: Heading above the machine tiles
+        type: string
+      - name: summary
+        label: Short description
+        description: Shown by search engines and when the page is shared. One or two sentences.
+        type: text
+      - name: body
+        label: Text below the dates
+        description: Markdown. The HTML block for the two columns (opening hours and contact) can stay as it is; just edit the text inside it.
+        type: code
+        options:
+          format: markdown
+
+  - name: home-en
+    label: Homepage (English)
+    description: The text on the photo at the top, the photo itself, and the text further down the page.
+    type: file
+    path: content/pages/en/home.md
+    format: yaml-frontmatter
+    operations: { create: false, rename: false, delete: false }
+    fields:
+      - name: hero_image
+        label: Photo at the top
+        type: image
+      - name: title
+        label: Heading on the photo
+        type: string
+        required: true
+      - name: intro
+        label: Text on the photo
+        description: Markdown. End a line with two spaces to start a new line without an empty line in between.
+        type: code
+        options:
+          format: markdown
+      - name: machines_title
+        label: Heading above the machine tiles
+        type: string
+      - name: summary
+        label: Short description
+        description: Shown by search engines and when the page is shared. One or two sentences.
+        type: text
+      - name: body
+        label: Text below the dates
+        description: Markdown. The HTML block for the two columns (opening hours and contact) can stay as it is; just edit the text inside it.
+        type: code
+        options:
+          format: markdown
+
+  - name: machines
+    label: Homepage tiles
+    type: file
+    path: content/data/machines.yml
+    format: yaml
+    list: true
+    fields:
+      - name: icon
+        label: Icon
+        type: image
+      - name: color
+        label: Background colour
+        description: A colour code like #2270b4.
+        type: string
+      - name: nl
+        label: Dutch
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: url, label: Links to, type: string }
+      - name: en
+        label: English
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: url, label: Links to, type: string }
+
+  - name: pages-nl
+    label: Pages (Nederlands)
+    type: collection
+    path: content/pages/nl
+    format: yaml-frontmatter
+    exclude: ["home.md"]       # the homepage has its own section
+    operations: { create: true, rename: false, delete: false }
+    view:
+      fields: [title, permalink]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: permalink
+        label: Web address
+        description: Starts and ends with a slash, e.g. /lasersnijden/.
+        type: string
+        required: true
+      - name: key
+        label: Translation key
+        description: The same key on the Dutch and English version connects the two pages.
+        type: string
+        required: true
+      - name: body
+        label: Text
+        description: Markdown. The HTML blocks for photos next to text and galleries can stay as they are; just edit the text inside them.
+        type: code
+        options:
+          format: markdown
+
+  - name: pages-en
+    label: Pages (English)
+    type: collection
+    path: content/pages/en
+    format: yaml-frontmatter
+    exclude: ["home.md"]       # the homepage has its own section
+    operations: { create: true, rename: false, delete: false }
+    view:
+      fields: [title, permalink]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: permalink
+        label: Web address
+        description: Starts and ends with a slash, e.g. /lasersnijden/.
+        type: string
+        required: true
+      - name: key
+        label: Translation key
+        description: The same key on the Dutch and English version connects the two pages.
+        type: string
+        required: true
+      - name: body
+        label: Text
+        description: Markdown. The HTML blocks for photos next to text and galleries can stay as they are; just edit the text inside them.
+        type: code
+        options:
+          format: markdown
+
   - name: open-inloop
     label: Open inloop dates
     description: Add a block for each Saturday. Dates that have passed will automatically be removed from the site. Leave the times empty for the usual 14:00-17:00.
@@ -47,92 +208,3 @@ content:
         label: Note
         description: Optional. Shown under the date, in both languages.
         type: string
-
-  - name: pages-nl
-    label: Pages (Nederlands)
-    type: collection
-    path: content/pages/nl
-    format: yaml-frontmatter
-    operations: { create: true, rename: false, delete: false }
-    view:
-      fields: [title, permalink]
-      primary: title
-    fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
-      - name: permalink
-        label: Web address
-        description: Starts and ends with a slash, e.g. /lasersnijden/.
-        type: string
-        required: true
-      - name: key
-        label: Translation key
-        description: The same key on the Dutch and English version connects the two pages.
-        type: string
-        required: true
-      - name: body
-        label: Text
-        description: Markdown. The HTML blocks for photos next to text and galleries can stay as they are; just edit the text inside them.
-        type: code
-        options:
-          format: markdown
-
-  - name: pages-en
-    label: Pages (English)
-    type: collection
-    path: content/pages/en
-    format: yaml-frontmatter
-    operations: { create: true, rename: false, delete: false }
-    view:
-      fields: [title, permalink]
-      primary: title
-    fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
-      - name: permalink
-        label: Web address
-        description: Starts and ends with a slash, e.g. /lasersnijden/.
-        type: string
-        required: true
-      - name: key
-        label: Translation key
-        description: The same key on the Dutch and English version connects the two pages.
-        type: string
-        required: true
-      - name: body
-        label: Text
-        description: Markdown. The HTML blocks for photos next to text and galleries can stay as they are; just edit the text inside them.
-        type: code
-        options:
-          format: markdown
-
-  - name: machines
-    label: Homepage tiles
-    type: file
-    path: content/data/machines.yml
-    format: yaml
-    list: true
-    fields:
-      - name: icon
-        label: Icon
-        type: image
-      - name: color
-        label: Background colour
-        description: A colour code like #2270b4.
-        type: string
-      - name: nl
-        label: Dutch
-        type: object
-        fields:
-          - { name: title, label: Title, type: string }
-          - { name: url, label: Links to, type: string }
-      - name: en
-        label: English
-        type: object
-        fields:
-          - { name: title, label: Title, type: string }
-          - { name: url, label: Links to, type: string }

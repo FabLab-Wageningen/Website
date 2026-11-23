@@ -88,9 +88,10 @@ The menus for both languages are in `content/site.yml`. The tiles are in `conten
 
 Besides editing on github.com, the site can be edited with [Pages CMS](https://pagescms.org), which shows forms instead of raw files. What it shows is set in `.pages.yml`:
 
-- **Open inloop dates**: a form per Saturday (date, hosts, optional times and note).
-- **Pages (Nederlands)** and **Pages (English)**: title, address, translation key and the page text in Markdown.
+- **Homepage (Nederlands)** and **Homepage (English)**: the photo at the top, the heading and text on it, the heading above the machine tiles, and the text further down.
 - **Homepage tiles**: icon, colour, titles and links.
+- **Pages (Nederlands)** and **Pages (English)**: title, address, translation key and the page text in Markdown (all pages except the homepage).
+- **Open inloop dates**: a form per Saturday (date, hosts, optional times and note).
 - Images are uploaded to `static/images/`.
 
 People with access to this repository on GitHub sign in at app.pagescms.org with GitHub. Volunteers without a GitHub account can be invited by email for this repository only; they sign in with a code sent to that address and can edit content and images, not the settings. Every save is a commit and goes live about a minute later.
